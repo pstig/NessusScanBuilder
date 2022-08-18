@@ -1,0 +1,9 @@
+#ignore scans
+*.csv
+
+#ignore report
+*.xlsx
+
+#ignore test files
+Spreadsheet.py
+test.py
