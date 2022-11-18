@@ -1,6 +1,6 @@
-#ignore scans
+#ignore scans and pics
 *.csv
-
+*.PNG
 #ignore report
 *.xlsx
 
