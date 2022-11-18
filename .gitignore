@@ -4,6 +4,7 @@
 
 #ignore report and templates
 *.xlsx
+*.xltx
 
 #ignore test files
 Spreadsheet.py
