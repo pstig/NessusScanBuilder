@@ -1,3 +1,4 @@
+from array import array
 import openpyxl
 import argparse
 import os
@@ -50,6 +51,7 @@ def generateVulnDetails(results):
     op1 = op1.drop(['Plugin ID', 'Synopsis', 'Risk Num'], axis=1)
     return op1
 
+#TODO Still has dupes 
 def generateGrouped(results):
     sevMap = pandas.DataFrame({'Risk': ['Low', 'Medium', 'High', 'Critical']})
     sortsevMap = sevMap.reset_index().set_index('Risk')
@@ -74,9 +76,10 @@ def createReport(portM, vuln, group):
     ws = wb.active
     for r in dataframe_to_rows(vuln, index=True, header=True):
         ws.append(r)
-    # wb.active=wb['Vulnerability Scan - Grouped']
+    wb.active=wb['Vulnerability Scan - Grouped']
     # for r in dataframe_to_rows(group, index=True, header=True):
     #     ws.append(r)
+
     wb.save('Sample Internal scan report.xlsx')
 
 #TODO add cmdline controls
