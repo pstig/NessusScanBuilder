@@ -1,7 +1,8 @@
 #ignore scans and pics
 *.csv
 *.PNG
-#ignore report
+
+#ignore report and templates
 *.xlsx
 
 #ignore test files
